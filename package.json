@@ -1,0 +1,48 @@
+{
+  "name": "project-comic",
+  "version": "1.0.0",
+  "description": "Root folder for project-comic",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "MEGATON TEAM",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "complex": "ts-plato --recurse --quiet --eslint ./.eslintrc --noempty --dir ./.reports/complex ./client/src ./server/src",
+    "complex:FE": "ts-plato --recurse --quiet --eslint ./.eslintrc --noempty --dir ./.reports/complexFE ./client/src",
+    "complex:BE": "ts-plato --recurse --quiet --eslint ./.eslintrc --noempty --dir ./.reports/complexBE ./server/src",
+    "prettier": "prettier --write ./server/src/**/*.ts --write ./client/src/**/*.{ts,tsx}",
+    "eslint:BE": "eslint --quiet ./server/src --ext .js,.ts --format node_modules/eslint-html-reporter/reporter.js --output-file .reports/eslint/backend/report.html",
+    "eslint:FE": "eslint --quiet ./client/src --ext .js,.jsx,.ts,.tsx --format node_modules/eslint-html-reporter/reporter.js --output-file .reports/eslint/frontend/report.html",
+    "review": "concurrently \"npm run prettier\" \"npm run eslint:BE\" \"npm run eslint:FE\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run review"
+    }
+  },
+  "dependencies": {
+    "concurrently": "^6.2.0",
+    "koa": "^2.13.4"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.25.0",
+    "@typescript-eslint/parser": "^4.25.0",
+    "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-html-reporter": "^0.7.4",
+    "eslint-plugin-flowtype": "^5.7.2",
+    "eslint-plugin-import": "^2.23.3",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-unicorn": "^33.0.1",
+    "husky": "^6.0.0",
+    "prettier": "^2.3.0",
+    "ts-plato": "0.0.6",
+    "typescript": "^4.7.4"
+  }
+}
