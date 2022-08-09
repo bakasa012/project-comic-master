@@ -1,0 +1,91 @@
+@import '../../sass/variable.scss';
+
+.header0 {
+	background: $template-nav-bg-color;
+	width: 100%;
+	z-index: 1;
+	box-shadow: 0 5px 8px fade(#000, 15);
+	position: relative;
+	top: 0;
+
+	.home-page {
+		padding: 0 24px;
+	}
+
+	&-logo {
+		display: inline-block;
+		position: relative;
+		width: 150px;
+		line-height: 64px;
+
+		& img {
+			vertical-align: middle;
+			display: inline-block;
+		}
+
+		& a {
+			display: block;
+		}
+	}
+
+	&-menu {
+		float: right;
+
+		.ant-menu {
+			line-height: 62px;
+			height: 64px;
+
+			a {
+				display: block;
+			}
+		}
+	}
+
+	&-item {
+		&-block {
+			padding: 0 8px;
+
+			>* {
+				display: inline-block;
+			}
+		}
+	}
+
+	&-item,
+	&-item-child,
+	&-menu {
+
+		.ant-menu-sub .ant-menu-item,
+		.ant-menu-inline .ant-menu-item {
+			height: auto;
+			line-height: 1.5;
+		}
+
+		.item {
+			&-sub-item {
+				display: block;
+				padding: 8px 24px;
+			}
+
+			&-image {
+				float: left;
+				margin-right: 16px;
+				margin-top: 4px;
+				position: relative;
+				z-index: 1;
+			}
+
+			&-title {
+				font-size: 14px;
+				color: #fff;
+				margin-left: 46px;
+			}
+
+			&-content {
+				font-size: 12px;
+				color: fade(#fff, 75);
+				margin-left: 46px;
+			}
+		}
+	}
+}
