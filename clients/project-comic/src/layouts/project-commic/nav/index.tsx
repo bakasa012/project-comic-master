@@ -19,6 +19,9 @@ const NavComponent = () => {
 		label,
 		type,
 	});
+	const items = [
+
+	]
 	return (
 		<Header>
 			<TweenOne component={'header'} animation={{ opacity: 1, type: 'from' }} className='header0 home-page-wrapper'>
