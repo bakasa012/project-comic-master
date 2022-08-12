@@ -1,5 +1,5 @@
 import React from 'react';
-import NavComponent from './nav';
+import NavComponent from './nav/index2';
 import { Layout } from 'antd';
 import BannerComponent from './banner';
 import ContentComponent from './content';
