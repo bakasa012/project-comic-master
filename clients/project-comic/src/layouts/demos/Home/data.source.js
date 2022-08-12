@@ -15,6 +15,8 @@ export const Nav00DataSource = {
         children: {
           href: '#',
           children: [{ children: '导航一', name: 'text' }],
+          subName: '导航一',
+           key: 'text',
         },
         subItem: [
           {
