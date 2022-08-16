@@ -1,8 +1,9 @@
 import React from 'react';
-import NavComponent from './nav/index2';
 import { Layout } from 'antd';
 import BannerComponent from './banner';
 import ContentComponent from './content';
+import NavComponent from './nav';
+import BackTopComponent from './back-top';
 
 const ProjectComic = () => {
   const [isMobile, SetMobile] = React.useState<boolean>(false);
@@ -11,6 +12,7 @@ const ProjectComic = () => {
       <NavComponent />
       <BannerComponent />
       <ContentComponent />
+      <BackTopComponent />
     </Layout>
   );
 };
