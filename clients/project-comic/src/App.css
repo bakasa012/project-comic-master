@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "megaton";
+  src: local('megaton'), url(./font/Megaton\ 400.otf) format('opentype');
+}
+
+
 .App {
   text-align: center;
 }
@@ -32,6 +38,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
