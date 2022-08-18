@@ -5,12 +5,13 @@ import BannerComponent from './banner';
 import NavComponent from './nav';
 import BackTopComponent from './back-top';
 import BannerAutoPlayComponent from './banner/banner-auto-play';
+import { DetectMobileDevice } from '../../configs/detect-mobile-device/detectIsMobile';
 
 const ProjectComic = () => {
   // const [isMobile, SetMobile] = React.useState<boolean>(false);
   return (
     <Layout>
-      <NavComponent />
+      <NavComponent isMobile={DetectMobileDevice(navigator, window)?.isMobile || false} />
       <BannerAutoPlayComponent />
       {/* <BannerComponent /> */}
       {/* <ContentComponent /> */}
