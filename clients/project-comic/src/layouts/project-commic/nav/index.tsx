@@ -1,9 +1,9 @@
 import { Affix, Layout, Menu, MenuProps } from 'antd';
 import React from 'react';
-import TweenOne from 'rc-tween-one';
 // import style from './css/nav.module.scss';
 import './css/nav.scss';
-import { NavDataSource } from './dataSource';
+import { isMobile } from 'react-device-detect';
+import { NavDataSource2 } from './dataSource2';
 interface NavProps {
   isMobile: boolean;
 }
@@ -11,7 +11,7 @@ type MenuItem = Required<MenuProps>['items'][number];
 
 const { Header } = Layout;
 const NavComponent = (props: NavProps) => {
-  const { isMobile } = props;
+  const useRefs = React.useRef<HTMLHeadingElement>(null);
   console.log(12005, isMobile);
   const getItemMenu = (
     label: React.ReactNode,
@@ -29,11 +29,14 @@ const NavComponent = (props: NavProps) => {
     className,
   });
   const items: MenuProps['items'] = [
-    ...NavDataSource.Menu.children.map((menu, index) => {
+    ...NavDataSource2.Menu.children.map((menu, index) => {
       const { children, name, className } = menu;
       return getItemMenu(children.childrenName, name, className);
     }),
   ];
+  const handleMenu = () => {
+    useRefs.current?.classList.toggle('active');
+  };
   return (
     <Affix>
       <Header className={'header'}>
@@ -52,16 +55,13 @@ const NavComponent = (props: NavProps) => {
           </div>
         </div>
         {isMobile && (
-          <div className='header-mobile-menu'>
+          <div className="header-mobile-menu" ref={useRefs} onClick={() => handleMenu()}>
             <em />
             <em />
             <em />
           </div>
         )}
-        {/* <TweenOne>
-
-        </TweenOne> */}
-        <div className='header-menu'>
+        <div className={isMobile ? 'header-menu-mobile' : 'header-menu'}>
           <Menu
             // theme="dark"
             mode={isMobile ? 'inline' : 'horizontal'}
@@ -69,10 +69,41 @@ const NavComponent = (props: NavProps) => {
             items={items}
           />
         </div>
-
       </Header>
     </Affix>
   );
 };
 
 export default NavComponent;
+
+{
+  /* <div className={'header-logo'}>
+<div
+  style={{
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%,-50%)',
+    fontFamily: 'megaton',
+    fontSize: 26,
+  }}
+>
+  MEGATEAM
+</div>
+</div>
+{isMobile && (
+<div className="header-mobile-menu">
+  <em />
+  <em />
+  <em />
+</div>
+)}
+
+<div className="header-menu">
+<Menu
+  mode={isMobile ? 'inline' : 'horizontal'}
+  defaultSelectedKeys={['1']}
+  items={items}
+/>
+</div> */
+}

@@ -11,8 +11,8 @@ const ProjectComic = () => {
   // const [isMobile, SetMobile] = React.useState<boolean>(false);
   return (
     <Layout>
-      <NavComponent isMobile={DetectMobileDevice(navigator, window)?.isMobile || false} />
-      <BannerAutoPlayComponent />
+      <NavComponent isMobile={true} />
+      {/* <BannerAutoPlayComponent /> */}
       {/* <BannerComponent /> */}
       {/* <ContentComponent /> */}
       <BackTopComponent />
