@@ -35,11 +35,11 @@ const NavComponent = (props: NavProps) => {
     }),
   ];
   const handleMenu = () => {
-    useRefs.current?.classList.toggle('active');
+    useRefs.current?.classList.toggle('open');
   };
   return (
     <Affix>
-      <Header className={'header'}>
+      <Header className={'header'} ref={useRefs}>
         <div className={'header-logo'}>
           <div
             style={{
@@ -61,13 +61,8 @@ const NavComponent = (props: NavProps) => {
             <em />
           </div>
         )}
-        <div className={isMobile ? 'header-menu-mobile' : 'header-menu'}>
-          <Menu
-            // theme="dark"
-            mode={isMobile ? 'inline' : 'horizontal'}
-            defaultSelectedKeys={['1']}
-            items={items}
-          />
+        <div className={'header-menu'}>
+          <Menu mode={isMobile ? 'inline' : 'horizontal'} defaultSelectedKeys={['1']} items={items} />
         </div>
       </Header>
     </Affix>

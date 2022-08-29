@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "..\\..\\..\\..\\..\\.."
+	},
+	{
+		"path": "..\\..\\..\\..\\..\\..\\..\\menu"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "menu"
+  }
+}
