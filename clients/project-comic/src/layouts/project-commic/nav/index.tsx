@@ -38,7 +38,7 @@ const NavComponent = (props: NavProps) => {
     useRefs.current?.classList.toggle('open');
   };
   return (
-    <Affix>
+    <Affix style={{ height: 'auto' }}>
       <Header className={'header'} ref={useRefs}>
         <div className={'header-logo'}>
           <div

@@ -69,68 +69,6 @@ $background-header: rgb(255, 255, 255);
       user-select: none;
     }
   }
-
-  // &-mobile-menu {
-  //   width: 16px;
-  //   height: 14px;
-  //   cursor: pointer;
-  //   position: absolute;
-  //   top: 24px;
-  //   right: 24px;
-  //   z-index: 100;
-
-  //   em {
-  //     display: block;
-  //     width: 100%;
-  //     height: 2px;
-  //     background: rgb(250, 7, 7);
-  //     margin-top: 4px;
-  //     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  //   }
-
-  //   :first-child {
-  //     margin-top: 0;
-  //   }
-  // }
-  // .header-mobile-menu.active {
-  //   em {
-  //     &:nth-child(1) {
-  //       transform: translateY(6px) rotate(45deg);
-  //     }
-
-  //     &:nth-child(2) {
-  //       opacity: 0;
-  //     }
-
-  //     &:nth-child(3) {
-  //       transform: translateY(-6px) rotate(-45deg);
-  //     }
-  //   }
-  // }
-  // & .open {
-  //   height: auto;
-
-  //   .header-mobile-menu {
-  //     em {
-  //       &:nth-child(1) {
-  //         transform: translateY(6px) rotate(45deg);
-  //       }
-
-  //       &:nth-child(2) {
-  //         opacity: 0;
-  //       }
-
-  //       &:nth-child(3) {
-  //         transform: translateY(-6px) rotate(-45deg);
-  //       }
-  //     }
-  //   }
-
-  //   > .header-menu {
-  //     opacity: 1;
-  //     pointer-events: auto;
-  //   }
-  // }
 }
 
 .header-menu {
@@ -141,6 +79,7 @@ $background-header: rgb(255, 255, 255);
 
 @media screen and (max-width: 768px) {
   .header {
+    transition: height 0.3s;
     &-logo {
       z-index: 101;
     }
@@ -152,20 +91,14 @@ $background-header: rgb(255, 255, 255);
         border: none;
       }
     }
-
-    // &.home-page-wrapper .home-page {
-    //   padding: 0 24px;
-    // }
-
     &-menu {
-      height: auto;
+      height: 0;
       float: inherit;
       position: relative;
       left: -24px;
       width: calc(100% + 48px);
       opacity: 0;
-      transition: opacity 0.3s ease-in-out;
-      transition: height 4s;
+      transition: opacity 0.3s;
       & li {
         padding: 0 24px;
 
@@ -204,7 +137,7 @@ $background-header: rgb(255, 255, 255);
     }
 
     &.open {
-      height: auto;
+      height: 300px;
 
       .header-mobile-menu {
         em {
@@ -223,14 +156,25 @@ $background-header: rgb(255, 255, 255);
       }
 
       > .header-menu {
-        opacity: 1;
+        // opacity: 1;
+        animation: delayOpacity 0.3s linear forwards;
+        animation-delay: 0.5s;
         pointer-events: auto;
-        height: 300px;
+        // transition: height 1s;
+        // height: 300px;
       }
     }
     &-item-block {
       height: 40px;
       line-height: 40px;
+    }
+  }
+  @keyframes delayOpacity {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
     }
   }
 }
