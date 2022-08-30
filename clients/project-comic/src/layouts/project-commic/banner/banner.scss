@@ -1,84 +1,138 @@
 @import '../../sass/variable.scss';
 
-.banner0 {
-  width: 100%;
+.container {
   height: 100vh;
+  width: 100%;
   position: relative;
   text-align: center;
-  border-color: #666;
-  background-image: url('https://zos.alipayobjects.com/rmsportal/gGlUMYGEIvjDOOw.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  & &-text-wrapper {
-    display: inline-block;
-    position: absolute;
-    top: 20%;
-    margin: auto;
-    left: 0;
-    right: 0;
-    font-size: 14px;
-    color: $template-text-color-light;
-    width: 550px;
-    > .queue-anim-leaving {
-      position: relative !important;
-    }
+  overflow: hidden;
+  background-color: #212121;
+  font-family: Verdana, Geneva, sans-serif;
+  z-index: 0;
+  // h1 {
+  //   margin: 0;
+  //   padding: 0;
+  // }
+}
+
+.title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  color: #eceff1;
+  font-size: 120px;
+  font-weight: 600;
+}
+
+.title-large {
+  height: 130px;
+  margin: -15px 0 0 -2px;
+  opacity: 0.1;
+}
+
+.img-container {
+  display: inline-block;
+  overflow: hidden;
+  margin-left: -2.8px;
+  margin-right: -2.8px;
+  width: 170px;
+  vertical-align: top;
+  border-radius: 0px 0px 80px 80px;
+  animation-name: flow;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-delay: -2s;
+  transition-timing-function: cubic-bezier(0, 0.57, 1, 0.46);
+  box-shadow: 2px 2px 16px 2px rgba(0, 0, 0, 0.5);
+}
+
+.second-animation {
+  animation-delay: -1.5s;
+}
+
+.third-animation {
+  animation-delay: -1s;
+}
+
+.fourth-animation {
+  animation-delay: -0.5s;
+}
+
+.fifth-animation {
+  animation-delay: 0s;
+}
+
+.sixth-animation {
+  animation-delay: 0.5s;
+}
+
+.seventh-animation {
+  animation-delay: 1s;
+}
+
+.img {
+  object-fit: cover;
+  width: 170px;
+  height: 100vh;
+  margin-top: -60px;
+}
+
+.nba {
+  margin-top: -20px;
+}
+
+@keyframes flow {
+  0% {
+    height: 20%;
+    border-radius: 0px 0px 30px 30px;
   }
-  & &-title {
-    width: 350px;
-    left: 30px;
-    min-height: 60px;
-    margin: auto;
-    display: inline-block;
-    font-size: 40px;
-    position: relative;
+
+  50% {
+    height: 90%;
+    border-radius: 0px 0px 100px 100px;
   }
-  & &-content {
-    margin-bottom: 20px;
-    word-wrap: break-word;
-    min-height: 24px;
-  }
-  & &-button {
-    border: 1px solid #fff;
-    color: #fff;
-    background: transparent;
-    box-shadow: 0 0 0 transparent;
-    font-size: 16px;
-    height: 40px;
-    transition: background 0.45s ease-out, box-shadow 0.45s ease-out;
-    &:hover {
-      color: #fff;
-      border-color: #fff;
-      background: rgba(255, 255, 255, 0.1);
-      box-shadow: 0 0 10px rgba(50, 250, 255, 0.75);
-    }
-    &:focus {
-      color: #fff;
-      border-color: #fff;
-    }
-    &.queue-anim-leaving {
-      width: auto;
-    }
-  }
-  & &-icon {
-    bottom: 20px;
-    font-size: 24px;
-    position: absolute;
-    left: 50%;
-    margin-left: -12px;
-    color: $template-text-color-light;
+
+  100% {
+    height: 20%;
+    border-radius: 0px 0px 30px 30px;
   }
 }
 
-@media screen and (max-width: 767px) {
-  .banner0 {
-    background-attachment: inherit;
-    & &-text-wrapper {
-      width: 90%;
+@media only screen and (max-width: 1200px) {
+  #img-7 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1028px) {
+  #img-1 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  #img-6 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    height: 50vh;
+    width: 100%;
+    h1 {
+      font-size: calc(100% + 60px);
     }
-    & &-title {
-      width: 90%;
-      left: 0;
+    // .img-container {
+    //   display: none;
+    // }
+    .img {
+      object-fit: cover;
+      width: 170px;
+      height: 50vh;
+      margin-top: -60px;
     }
   }
 }

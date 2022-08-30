@@ -1,21 +1,41 @@
-import { Button } from 'antd';
-import QueueAnim from 'rc-queue-anim';
 import React from 'react';
 import './banner.scss';
 const BannerComponent = () => {
   return (
-    <div className="banner0">
-      <QueueAnim key="QueueAnim" type={['bottom', 'top']} delay={200} className={'banner0-text-wrapper'}>
-        <div key="title" className="banner0-title">
-          <img src={'https://zos.alipayobjects.com/rmsportal/HqnZZjBjWRbjyMr.png'} width="100%" alt="img" />
-        </div>
-        <div key="content" className="banner0-content">
-          {'一个高效的页面动画解决方案'}
-        </div>
-        <Button ghost key="button" className="banner0-button">
-          {'Learn More'}
-        </Button>
-      </QueueAnim>
+    <div className="container">
+      <h1 className="title" style={{ fontFamily: 'megaton' }}>
+        Megateam
+      </h1>
+      <h1 className="title title-large" style={{ fontFamily: 'megaton' }}>
+        Megateam
+      </h1>
+      <div id="img-1" className="img-container">
+        <img className="img" src={process.env.PUBLIC_URL + '/images/lol.jpg'} />
+      </div>
+
+      <div className="img-container second-animation">
+        <img className="img" src={process.env.PUBLIC_URL + '/images/csgo.jpg'} />
+      </div>
+
+      <div className="img-container third-animation">
+        <img className="img" src={process.env.PUBLIC_URL + '/images/dota.jpg'} />
+      </div>
+
+      <div className="img-container fourth-animation">
+        <img className="img nba" src={process.env.PUBLIC_URL + '/images/batket-ball.jpg'} />
+      </div>
+
+      <div className="img-container fifth-animation">
+        <img className="img" src={process.env.PUBLIC_URL + '/images/fortnite.jpg'} />
+      </div>
+
+      <div id="img-6" className="img-container sixth-animation">
+        <img className="img" src={process.env.PUBLIC_URL + '/images/overwatch.png'} />
+      </div>
+
+      <div id="img-7" className="img-container seventh-animation">
+        <img className="img" src={process.env.PUBLIC_URL + '/images/nfp.jpg'} />
+      </div>
     </div>
   );
 };

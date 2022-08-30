@@ -4,7 +4,6 @@ import BannerComponent from './banner';
 // import ContentComponent from './content';
 import NavComponent from './nav';
 import BackTopComponent from './back-top';
-import BannerAutoPlayComponent from './banner/banner-auto-play';
 import { DetectMobileDevice } from '../../configs/detect-mobile-device/detectIsMobile';
 
 const ProjectComic = () => {
@@ -12,9 +11,7 @@ const ProjectComic = () => {
   return (
     <Layout>
       <NavComponent isMobile={true} />
-      {/* <BannerAutoPlayComponent /> */}
-      {/* <BannerComponent /> */}
-      {/* <ContentComponent /> */}
+      <BannerComponent />
       <BackTopComponent />
     </Layout>
   );

@@ -90,6 +90,17 @@ $background-header: rgb(255, 255, 255);
       .ant-menu-item-selected {
         border: none;
       }
+      // & .ant-menu-item-selected {
+      //   background-color: unset;
+      // }
+      .ant-menu-item-selected > span {
+        padding: 0px 5px;
+        border: 0;
+        border-radius: 20px 20px;
+        background: unset;
+        text-decoration: none;
+        user-select: none;
+      }
     }
     &-menu {
       height: 0;
@@ -98,7 +109,7 @@ $background-header: rgb(255, 255, 255);
       left: -24px;
       width: calc(100% + 48px);
       opacity: 0;
-      transition: opacity 0.3s;
+      transition: opacity 0.1s;
       & li {
         padding: 0 24px;
 
@@ -158,7 +169,7 @@ $background-header: rgb(255, 255, 255);
       > .header-menu {
         // opacity: 1;
         animation: delayOpacity 0.3s linear forwards;
-        animation-delay: 0.5s;
+        animation-delay: 0.3s;
         pointer-events: auto;
         // transition: height 1s;
         // height: 300px;

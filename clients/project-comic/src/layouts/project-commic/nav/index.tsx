@@ -70,35 +70,3 @@ const NavComponent = (props: NavProps) => {
 };
 
 export default NavComponent;
-
-{
-  /* <div className={'header-logo'}>
-<div
-  style={{
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%,-50%)',
-    fontFamily: 'megaton',
-    fontSize: 26,
-  }}
->
-  MEGATEAM
-</div>
-</div>
-{isMobile && (
-<div className="header-mobile-menu">
-  <em />
-  <em />
-  <em />
-</div>
-)}
-
-<div className="header-menu">
-<Menu
-  mode={isMobile ? 'inline' : 'horizontal'}
-  defaultSelectedKeys={['1']}
-  items={items}
-/>
-</div> */
-}
