@@ -15,8 +15,9 @@
     "complex:BE": "ts-plato --recurse --quiet --eslint ./.eslintrc --noempty --dir ./.reports/complexBE ./server/src",
     "prettier": "prettier --write ./server/src/**/*.ts --write ./client/src/**/*.{ts,tsx}",
     "eslint:BE": "eslint --quiet ./server/src --ext .js,.ts --format node_modules/eslint-html-reporter/reporter.js --output-file .reports/eslint/backend/report.html",
-    "eslint:FE": "eslint --quiet ./client/src --ext .js,.jsx,.ts,.tsx --format node_modules/eslint-html-reporter/reporter.js --output-file .reports/eslint/frontend/report.html",
-    "review": "concurrently \"npm run prettier\" \"npm run eslint:BE\" \"npm run eslint:FE\""
+    "eslint:FE": "eslint --quiet ./clients/project-comic/src --ext .js,.jsx,.ts,.tsx --format node_modules/eslint-html-reporter/reporter.js --output-file .reports/eslint/frontend/report.html",
+    "review": "concurrently \"npm run prettier\" \"npm run eslint:BE\" \"npm run eslint:FE\"",
+    "lint": "eslint . --ext .tsx"
   },
   "husky": {
     "hooks": {

@@ -1,7 +1,8 @@
 {
   "parser": "@typescript-eslint/parser",
+  "root": true,
   "parserOptions": {
-    "project": ["./clients/project-comic/tsconfig.json", "./server/tsconfig.json"]
+    "project": ["./clients/project-comic/tsconfig.json", "./api/tsconfig.json"]
   },
   "plugins": ["@typescript-eslint", "flowtype", "import", "jsx-a11y", "react", "react-hooks", "unicorn", "prettier"],
   "extends": [
@@ -65,6 +66,7 @@
     "require-atomic-updates": "off",
     "no-extra-boolean-cast": "off",
     "no-dupe-else-if": "off",
+
     /** Best Practices */
     "class-methods-use-this": "off",
     "complexity": [

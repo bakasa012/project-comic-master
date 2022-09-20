@@ -4,10 +4,11 @@ import BannerComponent from './banner';
 // import ContentComponent from './content';
 import NavComponent from './nav';
 import BackTopComponent from './back-top';
-import { DetectMobileDevice } from '../../configs/detect-mobile-device/detectIsMobile';
+// import { DetectMobileDevice } from '../../configs/detect-mobile-device/detectIsMobile';
 
 const ProjectComic = () => {
   // const [isMobile, SetMobile] = React.useState<boolean>(false);
+  const data: boolean = false;
   return (
     <Layout>
       <NavComponent isMobile={true} />
