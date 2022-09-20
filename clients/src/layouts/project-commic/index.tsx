@@ -8,7 +8,6 @@ import BackTopComponent from './back-top';
 
 const ProjectComic = () => {
   // const [isMobile, SetMobile] = React.useState<boolean>(false);
-  const data: boolean = false;
   return (
     <Layout>
       <NavComponent isMobile={true} />

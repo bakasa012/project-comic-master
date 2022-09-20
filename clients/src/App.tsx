@@ -4,9 +4,10 @@ import 'antd/dist/antd.min.css';
 // import ConfigProviderComponent from './andt.configs/ConfigProvider.component.config';
 // import { Layout } from 'antd';
 // import Home from './layouts/demos/Home';
-import ProjectComic from './layouts/project-commic';
+// import ProjectComic from './layouts/project-commic';
+import ProjectComicLayout from './layouts/project-comic.layouts';
 function App() {
-  return <ProjectComic />;
+  return <ProjectComicLayout />;
 }
 
 export default App;

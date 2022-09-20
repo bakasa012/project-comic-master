@@ -6,7 +6,7 @@ $background-header: rgb(255, 255, 255);
 .header-logo {
   float: left;
   width: 150px;
-  line-height: 64px;
+  line-height: 66px;
   height: 31px;
   margin: 16px 24px 16px 0px;
   background: rgba(223, 212, 212, 0.3);
@@ -74,6 +74,7 @@ $background-header: rgb(255, 255, 255);
 .header-menu {
   ul.ant-menu-overflow.ant-menu.ant-menu-root.ant-menu-horizontal.ant-menu-light {
     background: transparent; //$background-menu;
+    border: 0;
   }
 }
 

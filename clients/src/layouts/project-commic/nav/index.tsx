@@ -11,9 +11,7 @@ type MenuItem = Required<MenuProps>['items'][number];
 
 const { Header } = Layout;
 const NavComponent = (props: NavProps) => {
-  const boolean: boolean = false;
   const useRefs = React.useRef<HTMLHeadingElement>(null);
-  console.log(12005, isMobile);
   const getItemMenu = (
     label: React.ReactNode,
     key: React.Key,
