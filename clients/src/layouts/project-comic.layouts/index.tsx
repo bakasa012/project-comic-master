@@ -1,11 +1,12 @@
+import { Layout } from 'antd';
 import React from 'react';
 import NavbarComponent from './Navbar';
 
 const ProjectComicLayout = () => {
   return (
-    <div>
+    <Layout>
       <NavbarComponent />
-    </div>
+    </Layout>
   );
 };
 

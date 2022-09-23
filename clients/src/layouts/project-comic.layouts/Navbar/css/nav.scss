@@ -1,0 +1,33 @@
+/*
+* Variables
+*/
+$background-menu: rgb(255, 255, 255);
+$background-header: rgb(255, 255, 255);
+.header-logo {
+  background: rgba(243, 7, 7, 0.3);
+}
+.header-ul {
+  li {
+    color: red;
+    border-radius: 20px 20px;
+  }
+}
+.header-ul :hover {
+  color: rgb(87, 153, 228);
+  background: rgb(241, 243, 244);
+}
+
+@media screen and (min-width: 1000px) {
+  .rhm-rn-navigation__nav {
+    max-height: 3.5rem;
+  }
+  .header-ul {
+    li {
+      color: red;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+      margin: 0 !important;
+      border-radius: 50px 50px;
+    }
+  }
+}
