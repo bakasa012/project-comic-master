@@ -5,7 +5,7 @@ import NavbarComponent from './Navbar';
 const ProjectComicLayout = () => {
   return (
     <Layout>
-      <NavbarComponent />
+      <NavbarComponent uList={['ABOUT', 'PROJECTS', 'ELEMENTS', 'CONTACT']} checkDefault={0} />
     </Layout>
   );
 };
