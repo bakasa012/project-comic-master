@@ -6,7 +6,7 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
+    "@types/jest": "^29.1.2",
     "@types/node": "^16.11.47",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
@@ -25,8 +25,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test --env=puppeteer",
+    "eject": "react-scripts eject",
+    "jest": "jest"
   },
   "eslintConfig": {
     "extends": [
@@ -47,10 +48,20 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@babel/preset-env": "^7.19.3",
+    "@babel/preset-typescript": "^7.18.6",
+    "@types/expect-puppeteer": "^5.0.1",
+    "@types/jest-environment-puppeteer": "^5.0.2",
+    "@types/puppeteer": "^5.4.6",
+    "babel-jest": "^29.1.2",
     "enquire-js": "^0.2.1",
+    "jest-puppeteer": "^6.1.1",
+    "puppeteer": "^18.2.1",
     "rc-banner-anim": "^2.4.5",
     "rc-queue-anim": "^2.0.0",
     "rc-scroll-anim": "^2.7.6",
-    "rc-tween-one": "^3.0.6"
+    "rc-tween-one": "^3.0.6",
+    "ts-jest": "^29.0.3"
   }
 }
