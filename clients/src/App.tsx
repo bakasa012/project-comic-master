@@ -3,16 +3,14 @@ import './App.css';
 import 'antd/dist/antd.min.css';
 // import { Layout } from 'antd';
 // import Home from './layouts/demos/Home';
-// import ProjectComic from './layouts/project-commic';
-// import ProjectComicLayout from './layouts/project-comic.layouts';
+import ProjectComic from './layouts/project-commic';
+import ProjectComicLayout from './layouts/project-comic.layouts';
 import LoginComponent from './pages/logins';
 function App() {
   return (
-    // <>
-    //   <ProjectComicLayout />
-    //   <ProjectComic />
-    // </>
     <>
+      {/* <ProjectComicLayout />
+      <ProjectComic /> */}
       <LoginComponent />
     </>
   );

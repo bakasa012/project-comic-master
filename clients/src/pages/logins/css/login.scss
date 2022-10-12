@@ -1,0 +1,20 @@
+span.input-custom-antd {
+  border: none !important;
+  &:focus {
+    border-color: unset;
+    box-shadow: none;
+  }
+  &.ant-input-affix-wrapper-focused,
+  .ant-input-affix-wrapper:focus {
+    box-shadow: none;
+  }
+  & input.ant-input {
+    border-color: transparent;
+    border-bottom: 2px solid rgb(233, 234, 236);
+    color: rgb(171, 178, 192);
+  }
+}
+
+button.btn-custom-antd {
+  font-weight: 600;
+}

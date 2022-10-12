@@ -73,30 +73,9 @@ const NavbarComponent = (props: Props) => {
                 </span>
               </li>
             ))}
-            {/* <li>
-              <span id="span_1" key={'span_1'} className="header-li-checked" onClick={(e) => handleOnclickUList(e)}>
-                ABOUT
-              </span>
-            </li>
-            <li>
-              <span id="span_2" className="header-li-select" onClick={(e) => handleOnclickUList(e)}>
-                PROJECTS
-              </span>
-            </li>
-            <li>
-              <span id="span_3" className="header-li-select" onClick={(e) => handleOnclickUList(e)}>
-                ELEMENTS
-              </span>
-            </li>
-            <li>
-              <span id="span_4" className="header-li-select" onClick={(e) => handleOnclickUList(e)}>
-                CONTACT
-              </span>
-            </li> */}
           </ul>
         </ResponsiveNavbar>
       </Header>
-      <div style={{ height: '100vh' }}>aaaaaa</div>
     </>
   );
 };

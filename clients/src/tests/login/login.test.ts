@@ -1,8 +1,8 @@
 import path from 'path';
 
 describe('Login form', () => {
-  beforeAll(() => {
-    page.goto('http://localhost:3000', { waitUntil: 'load' });
+  beforeAll(async () => {
+    await page.goto('http://localhost:3000/', { waitUntil: 'load' });
   });
   it('Init login screen', async () => {
     await page.waitForSelector('.form-antd-custom');
@@ -30,9 +30,21 @@ describe('Login form', () => {
 
   it("Can't enter more than 20 characters", async () => {
     await page.waitForSelector('.form-antd-custom');
-    await page.type(
-      '#basic_form_username',
-      'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
-    );
+    await page.type('#basic_form_username', 'aaaaaaaaaaaaaaaaaaaaa');
+    await page.screenshot({ path: path.resolve(__dirname, './screenshots/maxlength.input.message.login.png') });
+    const messages = await page.$$eval('.ant-form-item-explain-error', (e) => e.map((v) => v.textContent));
+    expect(messages).toContain("Can't enter more than 20 characters");
+  });
+  it('Input && clear all characters', async () => {
+    await page.waitForSelector('.form-antd-custom');
+    await page.evaluate(() => {
+      const input = document.getElementById('basic_form_username') as HTMLInputElement;
+      input.value = '';
+    });
+    await page.type('#basic_form_username', 'a');
+    await page.keyboard.down('Backspace');
+    await page.screenshot({ path: path.resolve(__dirname, './screenshots/input.clear.message.login.png') });
+    const messages = await page.$$eval('.ant-form-item-explain-error', (e) => e.map((v) => v.textContent));
+    expect(messages).toContain('Please input your username!');
   });
 });

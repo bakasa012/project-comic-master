@@ -1,63 +1,84 @@
-import { Button, Checkbox, Form, Input } from 'antd';
+import { Button, Card, Col, Form, Input, Layout, Row, Typography } from 'antd';
+import { UserOutlined, UnlockOutlined } from '@ant-design/icons';
 import React from 'react';
+import './css/login.scss';
 
+const { Title } = Typography;
 const LoginComponent: React.FC = () => {
-  const onFinish = (values: any) => {
-    console.log('Success:', values);
-  };
+  // const onFinish = (values: any) => {
+  //   console.log('Success:', values);
+  // };
 
-  const onFinishFailed = (errorInfo: any) => {
-    console.log('Failed:', errorInfo);
-  };
+  // const onFinishFailed = (errorInfo: any) => {
+  //   console.log('Failed:', errorInfo);
+  // };
 
   return (
-    <Form
-      name="basic_form"
-      className="form-antd-custom"
-      labelCol={{ span: 4 }}
-      wrapperCol={{ span: 16 }}
-      initialValues={{ remember: true }}
-      onFinish={onFinish}
-      onFinishFailed={onFinishFailed}
-      autoComplete="off"
-      style={{ padding: 15 }}
-      requiredMark={false}
-      colon={false}
-    >
-      <Form.Item
-        label="Username"
-        name="username"
-        className="username-label-antd"
-        rules={[
-          { required: true, message: 'Please input your username!' },
-          { max: 20, message: "Can't enter more than 20 characters" },
-        ]}
-      >
-        <Input className="username-input-antd" />
-      </Form.Item>
+    <Layout>
+      <Row justify="center" align="middle" style={{ height: '100vh', width: '100%' }}>
+        <Col lg={{ span: 4 }}>
+          <Card style={{ width: '100%' }}>
+            <Title level={5} style={{ justifyContent: 'center', width: '100%', display: 'inline-flex' }}>
+              Login
+            </Title>
 
-      <Form.Item
-        label="Password"
-        name="password"
-        className="password-label-antd"
-        rules={[
-          { required: true, message: 'Please input your password!' },
-          { max: 20, message: "Can't enter more than 20 characters" },
-        ]}
-      >
-        <Input.Password />
-      </Form.Item>
+            <Form style={{ padding: '0 10px' }}>
+              <Form.Item style={{ paddingTop: 30 }}>
+                <Input
+                  className="input-custom-antd"
+                  placeholder="Username"
+                  size="large"
+                  prefix={<UserOutlined style={{ color: 'rgb(233, 234, 236)' }} />}
+                />
+              </Form.Item>
 
-      <Form.Item name="remember" valuePropName="checked" wrapperCol={{ offset: 4, span: 20 }}>
-        <Checkbox>Remember me</Checkbox>
-      </Form.Item>
+              <Form.Item>
+                <Input.Password
+                  className="input-custom-antd"
+                  visibilityToggle={false}
+                  // iconRender={(visible) => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
+                  prefix={<UnlockOutlined style={{ color: 'rgb(233, 234, 236)' }} />}
+                  size="large"
+                  placeholder="Password"
+                />
+              </Form.Item>
 
-      <Form.Item wrapperCol={{ offset: 4, span: 20 }}>
-        <Button type="primary" htmlType="submit" className="btn-submit-antd-custom">
-          Submit
-        </Button>
-      </Form.Item>
-    </Form>
+              <Form.Item style={{ paddingTop: 30 }}>
+                <Button
+                  className="btn-custom-antd"
+                  shape="round"
+                  type="primary"
+                  block
+                  style={{ backgroundColor: 'rgb(127, 145, 181)', borderColor: 'rgb(127, 145, 181)' }}
+                  size="large"
+                >
+                  Login
+                </Button>
+              </Form.Item>
+              <Form.Item style={{ marginBottom: 6 }}>
+                <Button className="btn-custom-antd" type="primary" ghost block shape="round" size="large">
+                  Facebook
+                </Button>
+              </Form.Item>
+
+              <Form.Item>
+                <Button
+                  className="btn-custom-antd"
+                  type="primary"
+                  ghost
+                  block
+                  shape="round"
+                  style={{ color: 'rgb(164, 117, 126)', borderColor: 'rgb(164, 117, 126)', border: '2px solid' }}
+                  size="large"
+                >
+                  Google
+                </Button>
+              </Form.Item>
+            </Form>
+          </Card>
+        </Col>
+      </Row>
+    </Layout>
   );
 };
 

@@ -4,19 +4,9 @@
 $background-menu: rgb(255, 255, 255);
 $background-header: rgb(255, 255, 255);
 .header-logo {
-  background: rgba(243, 7, 7, 0.3);
-  color: lightblue;
+  background: rgba(168, 154, 154, 0.3);
+  color: rgb(240, 247, 243);
 }
-// .header-ul {
-//   li {
-//     color: white;
-//   }
-// }
-// .header-ul :hover {
-//   color: #95a5a6;
-//   background: rgb(241, 243, 244);
-// }
-
 @media screen and (min-width: 1000px) {
   .rhm-rn-navigation__nav {
     max-height: 3.5rem;
