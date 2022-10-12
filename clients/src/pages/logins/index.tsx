@@ -5,9 +5,9 @@ import './css/login.scss';
 
 const { Title } = Typography;
 const LoginComponent: React.FC = () => {
-  // const onFinish = (values: any) => {
-  //   console.log('Success:', values);
-  // };
+  const onFinish = (values: any) => {
+    console.log('Success:', values);
+  };
 
   // const onFinishFailed = (errorInfo: any) => {
   //   console.log('Failed:', errorInfo);
@@ -22,8 +22,8 @@ const LoginComponent: React.FC = () => {
               Login
             </Title>
 
-            <Form style={{ padding: '0 10px' }}>
-              <Form.Item style={{ paddingTop: 30 }}>
+            <Form style={{ padding: '0 10px' }} onFinish={onFinish} name="login_forn-antd">
+              <Form.Item style={{ paddingTop: 30 }} name="username">
                 <Input
                   className="input-custom-antd"
                   placeholder="Username"
@@ -32,7 +32,7 @@ const LoginComponent: React.FC = () => {
                 />
               </Form.Item>
 
-              <Form.Item>
+              <Form.Item name="password">
                 <Input.Password
                   className="input-custom-antd"
                   visibilityToggle={false}
@@ -51,6 +51,7 @@ const LoginComponent: React.FC = () => {
                   block
                   style={{ backgroundColor: 'rgb(127, 145, 181)', borderColor: 'rgb(127, 145, 181)' }}
                   size="large"
+                  htmlType="submit"
                 >
                   Login
                 </Button>
