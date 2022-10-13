@@ -40,14 +40,23 @@ const LoginComponent: React.FC = () => {
               autoComplete="off"
               requiredMark={false}
               colon={false}
-              name="login_forn-antd"
+              name="login_form_antd"
             >
               <Form.Item
                 style={{ paddingTop: 30 }}
                 name="username"
-                rules={[{ required: true, message: 'Please input your username!' }]}
+                rules={[
+                  { required: true, message: 'Please input your username!' },
+                  { max: 20, message: "Can't enter more than 20 characters" },
+                ]}
               >
-                <Input className="input-custom-antd" placeholder="Username" size="large" prefix={<UserOutlined />} />
+                <Input
+                  className="input-custom-antd"
+                  placeholder="Username"
+                  size="large"
+                  prefix={<UserOutlined />}
+                  maxLength={21}
+                />
               </Form.Item>
 
               <Form.Item name="password">
@@ -62,7 +71,7 @@ const LoginComponent: React.FC = () => {
 
               <Form.Item style={{ paddingTop: 30 }}>
                 <Button
-                  className="btn-custom-antd"
+                  className="login-btn-custom-antd"
                   shape="round"
                   type="primary"
                   block
@@ -79,14 +88,14 @@ const LoginComponent: React.FC = () => {
                 </Text>
               </Form.Item>
               <Form.Item style={{ marginBottom: 6 }}>
-                <Button className="btn-custom-antd" type="primary" ghost block shape="round" size="large">
+                <Button className="login-btn-custom-antd" type="primary" ghost block shape="round" size="large">
                   Facebook
                 </Button>
               </Form.Item>
 
               <Form.Item>
                 <Button
-                  className="btn-custom-antd"
+                  className="login-btn-custom-antd"
                   type="primary"
                   ghost
                   block
