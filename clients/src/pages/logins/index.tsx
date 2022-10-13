@@ -2,42 +2,59 @@ import { Button, Card, Col, Form, Input, Layout, Row, Typography } from 'antd';
 import { UserOutlined, UnlockOutlined } from '@ant-design/icons';
 import React from 'react';
 import './css/login.scss';
+import { useNavigate, useLocation } from 'react-router-dom';
+import useAuth from '../../contexts/auth.context/Auth.context';
 
-const { Title } = Typography;
+const { Title, Text } = Typography;
 const LoginComponent: React.FC = () => {
-  const onFinish = (values: any) => {
-    console.log('Success:', values);
+  const navigate = useNavigate();
+  const location: any = useLocation();
+  const auth = useAuth();
+
+  const from = location.state?.from?.pathname || '/';
+
+  const onFinish = (values: { username: string; password: string }) => {
+    console.log('Success:', values, from);
+    auth.signin(values.username, () => {
+      navigate(from, { replace: true });
+    });
   };
 
-  // const onFinishFailed = (errorInfo: any) => {
-  //   console.log('Failed:', errorInfo);
-  // };
+  const onFinishFailed = (errorInfo: any) => {
+    console.log('Failed:', errorInfo);
+  };
 
   return (
-    <Layout>
+    <Layout className="login-layout-custom-ant">
       <Row justify="center" align="middle" style={{ height: '100vh', width: '100%' }}>
-        <Col lg={{ span: 4 }}>
-          <Card style={{ width: '100%' }}>
-            <Title level={5} style={{ justifyContent: 'center', width: '100%', display: 'inline-flex' }}>
+        <Col xl={{ span: 5 }} span={24}>
+          <Card className="login-card-custom-antd" style={{ width: '100%' }}>
+            <Title level={3} style={{ justifyContent: 'center', width: '100%', display: 'inline-flex' }}>
               Login
             </Title>
 
-            <Form style={{ padding: '0 10px' }} onFinish={onFinish} name="login_forn-antd">
-              <Form.Item style={{ paddingTop: 30 }} name="username">
-                <Input
-                  className="input-custom-antd"
-                  placeholder="Username"
-                  size="large"
-                  prefix={<UserOutlined style={{ color: 'rgb(233, 234, 236)' }} />}
-                />
+            <Form
+              style={{ padding: '0 10px' }}
+              onFinish={onFinish}
+              onFinishFailed={onFinishFailed}
+              autoComplete="off"
+              requiredMark={false}
+              colon={false}
+              name="login_forn-antd"
+            >
+              <Form.Item
+                style={{ paddingTop: 30 }}
+                name="username"
+                rules={[{ required: true, message: 'Please input your username!' }]}
+              >
+                <Input className="input-custom-antd" placeholder="Username" size="large" prefix={<UserOutlined />} />
               </Form.Item>
 
               <Form.Item name="password">
                 <Input.Password
                   className="input-custom-antd"
                   visibilityToggle={false}
-                  // iconRender={(visible) => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
-                  prefix={<UnlockOutlined style={{ color: 'rgb(233, 234, 236)' }} />}
+                  prefix={<UnlockOutlined />}
                   size="large"
                   placeholder="Password"
                 />
@@ -49,12 +66,17 @@ const LoginComponent: React.FC = () => {
                   shape="round"
                   type="primary"
                   block
-                  style={{ backgroundColor: 'rgb(127, 145, 181)', borderColor: 'rgb(127, 145, 181)' }}
+                  style={{ backgroundColor: 'rgb(64, 169, 255)', borderColor: 'rgb(127, 145, 181)' }}
                   size="large"
                   htmlType="submit"
                 >
                   Login
                 </Button>
+              </Form.Item>
+              <Form.Item>
+                <Text style={{ justifyContent: 'center', width: '100%', display: 'inline-flex' }}>
+                  - Or Sign in with -
+                </Text>
               </Form.Item>
               <Form.Item style={{ marginBottom: 6 }}>
                 <Button className="btn-custom-antd" type="primary" ghost block shape="round" size="large">

@@ -60,9 +60,9 @@ const NavbarComponent = (props: Props) => {
             },
           }}
         >
-          <ul className="header-ul" ref={ref}>
+          <ul className="header-ul" ref={ref} key={`ul_${reactId}`}>
             {uList.map((v, index) => (
-              <li>
+              <li key={`li_${reactId}_${index}`}>
                 <span
                   id={`${reactId}_${index}`}
                   key={`span_${reactId}`}

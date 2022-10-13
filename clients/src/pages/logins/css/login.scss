@@ -1,20 +1,48 @@
+section.login-layout-custom-ant {
+  background: linear-gradient(40deg, rgb(153, 223, 233), rgb(198 112 216), rgb(195 213 161));
+}
+
+div.login-card-custom-antd {
+  border-radius: 40px;
+}
+
 span.input-custom-antd {
   border: none !important;
   &:focus {
     border-color: unset;
     box-shadow: none;
   }
+
+  // color icon
+  span > span.anticon-user {
+    color: rgb(233, 234, 236);
+  }
+  span > span.anticon.anticon-unlock {
+    color: rgb(233, 234, 236);
+  }
   &.ant-input-affix-wrapper-focused,
   .ant-input-affix-wrapper:focus {
     box-shadow: none;
+    span > span {
+      color: rgb(109, 131, 255) !important;
+    }
   }
   & input.ant-input {
     border-color: transparent;
     border-bottom: 2px solid rgb(233, 234, 236);
     color: rgb(171, 178, 192);
+    &:focus {
+      border-color: rgb(109, 131, 255);
+    }
   }
 }
 
 button.btn-custom-antd {
   font-weight: 600;
+  // transition: all 1s;
+  &:hover {
+    transform: translateY(-1px);
+    // background-color: rgba(16, 124, 211, 0.5) !important;
+    border-color: rgba(16, 124, 211, 0.5) !important;
+  }
 }
