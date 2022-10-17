@@ -1,6 +1,8 @@
 import RequireAuthComponent from '../components/Auth.component/RequireAuth.component';
 import ProjectComicLayout from '../layouts/project-comic.layouts';
+import ContactComponent from '../pages/contacts';
 import LoginComponent from '../pages/logins';
+import PageNotFound from '../pages/page-not-found';
 
 const routers = [
   {
@@ -10,6 +12,10 @@ const routers = [
       {
         path: '/',
         component: <div>aaaaaaaaaaaaaaaaaaaaaaaa</div>,
+      },
+      {
+        path: 'contact',
+        component: <ContactComponent />,
       },
       {
         path: 'user',
@@ -34,18 +40,18 @@ const routers = [
       {
         index: true,
         // path: 'protected',
-        component: <div>aaaaaaaaaaaaaaaaaaaaaaaa</div>,
+        component: <div>cccccccccccccccccccccc</div>,
       },
       {
         path: 'user',
-        component: <div>bbbbbbbbbbbbbbbbbbbbb</div>,
+        component: <div>bbbbbbbbbbbbbbbbbbbbbbbbbbb</div>,
       },
     ],
   },
 
   {
     path: '*',
-    component: <div>Page Not Found</div>,
+    component: <PageNotFound />,
   },
 ];
 

@@ -1,0 +1,26 @@
+.contact-input-custom-antd {
+  border: none;
+  //   border-color: 'unset';
+
+  border-color: transparent;
+  border-bottom: 2px solid rgb(233, 234, 236);
+  color: rgb(30, 30, 30);
+  padding-left: 0;
+  &:focus {
+    border-color: rgb(30, 30, 30) !important;
+    box-shadow: none;
+    &.ant-input-status-error:focus {
+      border-color: red !important;
+    }
+  }
+  &.ant-input-status-error:focus {
+    box-shadow: unset !important;
+  }
+
+  &:hover {
+    border-color: rgb(233, 234, 236);
+    // &.ant-input-status-error {
+    //   border-color: 'red';
+    // }
+  }
+}

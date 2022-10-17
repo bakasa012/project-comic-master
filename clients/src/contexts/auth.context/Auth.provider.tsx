@@ -2,9 +2,10 @@ import React from 'react';
 import { AuthContext } from './Auth.context';
 
 const AuthProvider = ({ children }: { children: React.ReactNode }) => {
-  const [user, setUser] = React.useState<string | null>(null);
+  const [user, setUser] = React.useState<string | null>(sessionStorage.getItem('auth_'));
 
   const signin = (username: string, callback: VoidFunction) => {
+    sessionStorage.setItem('auth_', username);
     setUser(username);
     callback();
   };

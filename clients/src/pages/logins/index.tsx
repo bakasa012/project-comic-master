@@ -51,7 +51,7 @@ const LoginComponent: React.FC = () => {
                 ]}
               >
                 <Input
-                  className="input-custom-antd"
+                  className="login-input-custom-antd"
                   placeholder="Username"
                   size="large"
                   prefix={<UserOutlined />}
@@ -61,7 +61,7 @@ const LoginComponent: React.FC = () => {
 
               <Form.Item name="password">
                 <Input.Password
-                  className="input-custom-antd"
+                  className="login-input-custom-antd"
                   visibilityToggle={false}
                   prefix={<UnlockOutlined />}
                   size="large"

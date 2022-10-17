@@ -29,6 +29,7 @@ const NavbarComponent = (props: Props) => {
     <>
       <Header className="header" style={{ height: 'auto' }}>
         <ResponsiveNavbar
+          id="header_nav"
           className="header-nav"
           logo={
             <div className={'header-logo'}>
