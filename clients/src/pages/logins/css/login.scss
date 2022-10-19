@@ -23,10 +23,26 @@ span.login-input-custom-antd {
   &.ant-input-affix-wrapper-focused,
   .ant-input-affix-wrapper:focus {
     box-shadow: none;
-    span > span {
-      color: rgb(109, 131, 255) !important;
+    span > span.anticon.anticon-user {
+      color: rgb(109, 131, 255);
+    }
+    span > span.anticon.anticon-unlock {
+      color: rgb(109, 131, 255);
     }
   }
+  // end
+
+  // error focus
+  &.ant-input-affix-wrapper-status-error {
+    box-shadow: unset !important;
+    & > input {
+      border-color: #ff4d4f !important;
+    }
+    & > span > span.anticon-user {
+      color: #ff4d4f !important;
+    }
+  }
+  // end
   & input.ant-input {
     border-color: transparent;
     border-bottom: 2px solid rgb(233, 234, 236);

@@ -27,7 +27,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=puppeteer",
     "eject": "react-scripts eject",
-    "jest": "jest"
+    "jest": "jest",
+    "jest:login": "jest -- login.test.ts"
   },
   "eslintConfig": {
     "extends": [
@@ -56,6 +57,7 @@
     "@types/puppeteer": "^5.4.6",
     "babel-jest": "^29.1.2",
     "enquire-js": "^0.2.1",
+    "jest-html-reporter": "^3.7.0",
     "jest-puppeteer": "^6.1.1",
     "puppeteer": "^18.2.1",
     "rc-banner-anim": "^2.4.5",

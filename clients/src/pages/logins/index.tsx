@@ -59,11 +59,12 @@ const LoginComponent: React.FC = () => {
                 />
               </Form.Item>
 
-              <Form.Item name="password">
+              <Form.Item name="password" rules={[{ max: 20, message: "Can't enter more than 20 characters" }]}>
                 <Input.Password
                   className="login-input-custom-antd"
                   visibilityToggle={false}
                   prefix={<UnlockOutlined />}
+                  maxLength={21}
                   size="large"
                   placeholder="Password"
                 />
