@@ -1,4 +1,4 @@
-import { Button, Card, Col, Form, Input, Layout, Row, Typography } from 'antd';
+import { Button, Card, Col, Form, Input, Layout, message, Row, Typography } from 'antd';
 import { UserOutlined, UnlockOutlined } from '@ant-design/icons';
 import React from 'react';
 import './css/login.scss';
@@ -18,6 +18,10 @@ const LoginComponent: React.FC = () => {
     auth.signin(values.username, () => {
       navigate(from, { replace: true });
     });
+    message.success({
+      className: 'login-message-custom-antd',
+      content: 'Login successfully',
+    });
   };
 
   const onFinishFailed = (errorInfo: any) => {
@@ -27,7 +31,7 @@ const LoginComponent: React.FC = () => {
   return (
     <Layout className="login-layout-custom-ant">
       <Row justify="center" align="middle" style={{ height: '100vh', width: '100%' }}>
-        <Col xl={{ span: 5 }} span={24}>
+        <Col xl={5} xxl={5} lg={8} span={24}>
           <Card className="login-card-custom-antd" style={{ width: '100%' }}>
             <Title level={3} style={{ justifyContent: 'center', width: '100%', display: 'inline-flex' }}>
               Login

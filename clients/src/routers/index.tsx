@@ -1,6 +1,8 @@
 import RequireAuthComponent from '../components/Auth.component/RequireAuth.component';
 import ProjectComicLayout from '../layouts/project-comic.layouts';
+import AlbumComponent from '../pages/album';
 import ContactComponent from '../pages/contacts';
+import HomePageComponent from '../pages/home';
 import LoginComponent from '../pages/logins';
 import PageNotFound from '../pages/page-not-found';
 
@@ -19,7 +21,11 @@ const routers = [
       },
       {
         path: 'user',
-        component: <div>bbbbbbbbbbbbbbbbbbbbb</div>,
+        component: <HomePageComponent />,
+      },
+      {
+        path: 'album',
+        component: <AlbumComponent />,
       },
     ],
   },

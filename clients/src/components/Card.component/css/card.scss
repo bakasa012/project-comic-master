@@ -1,0 +1,9 @@
+.card-custom-antd {
+  padding: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .card-custom-antd {
+    padding: 1px;
+  }
+}

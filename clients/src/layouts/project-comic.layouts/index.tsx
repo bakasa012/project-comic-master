@@ -1,6 +1,6 @@
 import { Layout } from 'antd';
 import React from 'react';
-import BannerComponent from './banner.layout';
+// import BannerComponent from './banner.layout';
 import NavbarComponent from './Navbar';
 import { Outlet } from 'react-router-dom';
 import './css.layout/style.css';
@@ -10,7 +10,7 @@ const ProjectComicLayout = () => {
   return (
     <Layout>
       <NavbarComponent uList={['ABOUT', 'PROJECTS', 'ELEMENTS', 'CONTACT']} checkDefault={0} />
-      <BannerComponent />
+      {/* <BannerComponent /> */}
       <Content style={{ minHeight: '90vh', margin: '55px 16px 0 16px' }}>
         <Outlet />
       </Content>

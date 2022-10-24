@@ -1,5 +1,6 @@
 import { Button, Col, Form, Input, Layout, Row, Typography } from 'antd';
 import React from 'react';
+import MessageCustomComponent, { MessageType } from '../../components/Messages.component/MessageCustom.component';
 import './css/contact.scss';
 const { Title } = Typography;
 const ContactComponent = () => {
@@ -41,7 +42,19 @@ const ContactComponent = () => {
             </Form.Item>
 
             <Form.Item>
-              <Button htmlType="submit">Send Message</Button>
+              <Button
+                htmlType="submit"
+                onClick={() =>
+                  MessageCustomComponent({
+                    className: 'message-custom-antd',
+                    content: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+                    type: MessageType.success,
+                    duration: 100000,
+                  })
+                }
+              >
+                Send Message
+              </Button>
             </Form.Item>
           </Form>
         </Col>

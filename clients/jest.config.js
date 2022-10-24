@@ -1,7 +1,7 @@
 module.exports = {
 	preset: 'jest-puppeteer',
 	roots: [ 'src/tests' ],
-	testTimeout: 300000,
+	testTimeout: 30000,
 	collectCoverage: false,
 	coverageDirectory: "<rootDir>/test-reports/coverage",
 	coverageReporters: ["text", "json", "html"],
