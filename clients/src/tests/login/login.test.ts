@@ -81,9 +81,7 @@ describe('Login form', () => {
 
     await page.screenshot({ path: path.resolve(__dirname, './screenshots/login.success.screen.login.jpg') });
 
-    const messages = await page.$eval('.login-message-custom-antd > div > span', (e) => e.textContent);
-    console.log(12005, messages);
-
+    const messages = await page.$eval('.login-message-custom-antd > div', (e) => e.textContent);
     expect(messages).toContain('Login successfully');
   });
 });

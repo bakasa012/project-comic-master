@@ -1,9 +1,9 @@
 {
   "parser": "@typescript-eslint/parser",
   "root": true,
-  "parserOptions": {
-    "project": ["./clients/project-comic/tsconfig.json", "./api/tsconfig.json"]
-  },
+  // "parserOptions": {
+  //   "project": ["./clients/project-comic/tsconfig.json", "./api/tsconfig.json"]
+  // },
   "plugins": ["@typescript-eslint", "flowtype", "import", "jsx-a11y", "react", "react-hooks", "unicorn", "prettier"],
   "extends": [
     "eslint:recommended",
