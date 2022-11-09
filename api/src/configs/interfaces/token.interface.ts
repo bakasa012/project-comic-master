@@ -1,4 +1,4 @@
-import { RoleName } from "./role.interface";
+import { RoleName } from './role.interface';
 
 export interface PayLoad {
   id: number;
@@ -7,4 +7,5 @@ export interface PayLoad {
   fullName: string;
   iat: number;
   exp: number;
+  employeeNumber?: string;
 }

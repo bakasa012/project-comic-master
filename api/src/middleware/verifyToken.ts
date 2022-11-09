@@ -1,8 +1,8 @@
-import { Context, Next } from "koa";
-import jwt from "jsonwebtoken";
-import httpStatus from "http-status";
-import { PayLoad } from "../configs/interfaces/token.interface";
-import UserModel from "../models/user.model";
+import { Context, Next } from 'koa';
+import jwt from 'jsonwebtoken';
+import httpStatus from 'http-status';
+import { PayLoad } from '../configs/interfaces/token.interface';
+import UserModel from '../models/user.model';
 
 /**
  * Get token information from cookie request
@@ -10,7 +10,7 @@ import UserModel from "../models/user.model";
  * @returns object or null
  */
 export function getToken(ctx: Context): PayLoad | null {
-  const cookieName = process.env.COOKIE_NAME || "auth__";
+  const cookieName = process.env.COOKIE_NAME || 'auth__';
   const getToken = ctx.cookies.get(cookieName);
   if (getToken) {
     const decode = DecodeJsonWebToken(getToken);
@@ -26,27 +26,27 @@ export function getToken(ctx: Context): PayLoad | null {
  * @param next Whether next () is called in three or not does not affect bubbles. If next () is not called, it will not be passed to the next middleware. At this time three can be regarded as a common method.
  */
 export function verifyToken(ctx: Context, next: Next) {
-  const cookieName = process.env.COOKIE_NAME || "auth__";
+  const cookieName = process.env.COOKIE_NAME || 'auth__';
   const getToken = ctx.cookies.get(cookieName);
   if (getToken) {
     const decode = DecodeJsonWebToken(getToken);
     if (!decode) {
       ctx.response.status = httpStatus.UNAUTHORIZED;
-      ctx.response.body = { message: "Access is not allowed" };
+      ctx.response.body = { message: 'Access is not allowed' };
       return ctx;
     }
 
     const ts = Math.round(new Date().getTime() / 1000);
     if (ts > decode.exp) {
       ctx.response.status = httpStatus.UNAUTHORIZED;
-      ctx.response.body = { message: "Access is not allowed" };
+      ctx.response.body = { message: 'Access is not allowed' };
       return ctx;
     }
     ctx.userId = decode.id;
     return next();
   } else {
     ctx.response.status = httpStatus.UNAUTHORIZED;
-    ctx.response.body = { message: "Access is not allowed" };
+    ctx.response.body = { message: 'Access is not allowed' };
     return ctx;
   }
 }
@@ -64,15 +64,16 @@ export function isAdmin(ctx: Context, next: Next) {
  * @returns {id: number, username: string, fullName: string, iat: string, exp: string, ...}
  * @type {(token: string)=> {id: number, username: string, ...}}
  */
-function DecodeJsonWebToken(token: string): PayLoad | null {
+export function DecodeJsonWebToken(token: string): PayLoad | null {
   const secretKey = process.env.SECRET_KEY;
-  const decodeToken: PayLoad | null = jwt.verify(
-    token,
-    secretKey,
-    (err, decoded: PayLoad) => {
-      if (err) return undefined;
-      return decoded;
-    }
-  ) as unknown as PayLoad | null;
+  const decodeToken: PayLoad | null = jwt.verify(token, secretKey, (err, decoded: PayLoad) => {
+    if (err) return undefined;
+    return decoded;
+  }) as unknown as PayLoad | null;
+  return decodeToken;
+}
+
+export function DecodeJsonWebToken2(token: string): PayLoad | null {
+  const decodeToken: PayLoad | null = jwt.decode(token) as unknown as PayLoad | null;
   return decodeToken;
 }
