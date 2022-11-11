@@ -6,6 +6,8 @@ describe('test', () => {
     const decode = DecodeJsonWebToken2(
       'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTYzLCJlbXBsb3llZU51bWJlciI6IjIwMDU3MjEiLCJwb3NpdGlvbklkIjoiIiwiZGVwYXJ0bWVudElkIjoiMTY3MzgiLCJyb2xlIjoidXNlciIsImlhdCI6MTY2NzkwMjIyMiwiZXhwIjoxNjcwNDk0MjIyfQ.jDxJhcu-dGQXOSyhJiNn6e-VHPT9eokdsVSfCKqo4NA',
     );
-    assert.equal(decode.employeeNumber, '2005721');
+    console.log(decode);
+
+    assert.equal(decode.employeeNumber, '2005721111');
   });
 });

@@ -9,11 +9,4 @@ module.exports = {
   // product: 'chrome',
 	// executablePath: "C:/Program Files (x86)/Google/Chrome/Application"
   },
-  // browser:{
-  //   close: true
-  // }
-//   page:{
-// 	setViewport: {width: 1366, height: 768}
-//   }
-  // browser: 'chromium',
 };

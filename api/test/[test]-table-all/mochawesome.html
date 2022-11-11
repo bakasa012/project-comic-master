@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mochawesome Report Card</title>
+    
+    <link rel="stylesheet" href="css/mochawesome.css">
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="report-info-cnt">
+          <h1 class="report-title">api</h1>
+          <h3 class="report-date">Thursday, November 10 2022, 10:15am</h3>
+        </div>
+        <div class="nav-right">
+          <div class="quick-summary-cnt">
+              <ul class="list-unstyled quick-summary">
+                <li class="qs-item summary-duration" title="Duration">18<span>MS</span></li>
+                <li class="qs-item summary-suites" title="Suites">1</li>
+                <li class="qs-item summary-tests" title="Tests">1</li>
+                <li class="qs-item summary-passes" title="Passed" data-filter="passed">0</li>
+                <li class="qs-item summary-failures" title="Failed" data-filter="failed">1</li>
+                <li class="qs-item summary-pending" title="Pending" data-filter="pending">0</li>
+              </ul>          </div>
+          <button class="nav-menu-btn open-menu"><i class="icon-menu"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Report Summary -->
+    <div class="summary">
+      <div class="container">
+          <div class="row">
+            <div class="summary-col summary-duration">
+              <h1 class="summary-count">18<span>MS</span></h1>
+              <h4 class="summary-label">MS</h4>
+            </div>
+            <div class="summary-col summary-suites" title="Suites">
+              <h1 class="summary-count">1</h1>
+              <h4 class="summary-label">Suite</h4>
+            </div>
+            <div class="summary-col summary-tests" title="Tests">
+              <h1 class="summary-count">1</h1>
+              <h4 class="summary-label">Test</h4>
+            </div>
+            <div class="summary-col summary-passes" data-filter="passed" title="Passed">
+              <h1 class="summary-count">0</h1>
+              <h4 class="summary-label">Passed</h4>
+            </div>
+            <div class="summary-col summary-failures" data-filter="failed" title="Failed">
+              <h1 class="summary-count">1</h1>
+              <h4 class="summary-label">Failed</h4>
+            </div>
+            <div class="summary-col summary-pending" data-filter="pending" title="Pending">
+              <h1 class="summary-count">0</h1>
+              <h4 class="summary-label">Pending</h4>
+            </div>
+          </div>      </div>
+    </div>
+    <div class="statusbar">
+      <div class="container">
+          <div class="row">
+            <div class="status-item status-item-pending-pct">0% Pending</div>
+            <div class="status-item status-item-passing-pct danger">0% Passing</div>
+          </div>      </div>
+    </div>
+
+    <!-- Suites -->
+    <div class="details container">
+            <section class="suite-wrap">
+          <div id="ae81fa10-6ee8-46fe-bc4d-71c356e2608a" class="suite has-tests has-failed">
+            <h3 class="suite-title">test</h3>
+            <h5 class="suite-filename">\src\tests\middleware.test\DecodeJwt.test.ts</h5>
+            <!-- Suite Chart -->
+            <div class="suite-chart-wrap">
+              <canvas id="ae81fa10-6ee8-46fe-bc4d-71c356e2608a" class="suite-chart" width="50" height="50" data-total-passes="0" data-total-failures="1" data-total-pending="0" data-total-skipped="0"></canvas>
+            </div>
+            <div class="suite-data-wrap">
+              <!-- Suite Summary -->
+              <ul class="suite-summary list-unstyled">
+                <li class="suite-summary-item duration">2 ms</li>
+                <li class="suite-summary-item tests">1</li>
+                <li class="suite-summary-item passed">0</li>
+                <li class="suite-summary-item failed">1</li>
+                <li class="suite-summary-item pending">0</li>
+              </ul>
+              <!-- Test Info -->
+              <div class="suite-test-wrap">
+                <div class="suite-test-header" data-toggle="collapse" data-target="#ae81fa10-6ee8-46fe-bc4d-71c356e2608a-test-list">
+                  <h4 class="suite-test-header-title">Tests</h4>
+                </div>
+                <div id="ae81fa10-6ee8-46fe-bc4d-71c356e2608a-test-list" class="list-group test-list collapse in">
+                    <div id="6999c640-30ad-40c9-84b8-4ddd1923307f" class="list-group-item test failed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              test 1
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#6999c640-30ad-40c9-84b8-4ddd1923307f > .test-logr.collapse">Log </button>
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#6999c640-30ad-40c9-84b8-4ddd1923307f > .test-code.collapse">Code </button>
+              <span class="test-duration ">2 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+            <p class="test-error-message">AssertionError: expected &#x27;2005721&#x27; to equal &#x27;2005721111&#x27;
+              <button class="btn btn-link btn-sm toggle-btn toggle-stack collapsed" data-toggle="collapse" data-target="#6999c640-30ad-40c9-84b8-4ddd1923307f > .test-error-stack.collapse">Stack </button><button class="btn btn-link btn-sm toggle-btn toggle-stack collapsed" data-toggle="collapse" data-target="#6999c640-30ad-40c9-84b8-4ddd1923307f > .test-error-scr.collapse">Screenshot </button>
+            </p>
+        <br>  <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small"><span class="hljs-keyword">const</span> decode = (<span class="hljs-number">0</span>, verifyToken_1.DecodeJsonWebToken2)(<span class="hljs-string">'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTYzLCJlbXBsb3llZU51bWJlciI6IjIwMDU3MjEiLCJwb3NpdGlvbklkIjoiIiwiZGVwYXJ0bWVudElkIjoiMTY3MzgiLCJyb2xlIjoidXNlciIsImlhdCI6MTY2NzkwMjIyMiwiZXhwIjoxNjcwNDk0MjIyfQ.jDxJhcu-dGQXOSyhJiNn6e-VHPT9eokdsVSfCKqo4NA'</span>);<br><span class="hljs-built_in">console</span>.log(decode);<br>chai_1.assert.equal(decode.employeeNumber, <span class="hljs-string">'2005721111'</span>);</code></pre>
+          </div>
+          <div class="test-error-stack collapse">
+            <pre><code class="hljs small">Difference between Expected(+) and Actual(-):
+        
+              expected '2005721' to equal '2005721111'
+              + expected - actual
+        
+              -2005721
+              +2005721111
+              
+        
+        Expected:
+        2005721111
+        
+        Actual:
+        2005721
+        
+        Stack:
+        AssertionError: expected <span class="hljs-string">'2005721'</span> to equal <span class="hljs-string">'2005721111'</span><br>    at Context.&lt;anonymous&gt; (src\tests\middleware.test\DecodeJwt.test.ts:<span class="hljs-number">11</span>:<span class="hljs-number">12</span>)<br>    at processImmediate (node:internal/timers:<span class="hljs-number">471</span>:<span class="hljs-number">21</span>)</code></pre>
+          </div>
+          <div class="test-error-scr collapse">
+            <pre><code class="hljs small"><img src="./screenshots/1668050118816_test_test_1.png"></code></pre>
+          </div>
+        </div>        </div>
+              </div>
+            </div>
+        
+        
+          </div>
+        </section>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>Report generated by <a href="http://adamgruber.github.io/mochawesome/" target="_blank">mochawesome</a>.<br>Designed and built by <a href="https://github.com/adamgruber" target="_blank">adamgruber</a>. &copy;2022.</p>
+      </div>
+    </footer>
+
+    <!-- Nav Menu -->
+    <div class="nav-menu-wrap">
+      <div class="menu-overlay close-menu"></div>
+      <nav class="menu">
+        <button class="nav-menu-btn close-menu"><i class="icon-failed"></i></button>
+        <ul class="list-unstyled main-menu">
+                <li class="nav-menu-item">
+                <a href="#ae81fa10-6ee8-46fe-bc4d-71c356e2608a" class="nav-menu-item-link has-failures">test</a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/vendor.js"></script>
+    <script src="js/mochawesome.js"></script>
+  </body>
+</html>

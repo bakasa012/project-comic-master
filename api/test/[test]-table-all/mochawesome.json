@@ -1,0 +1,182 @@
+{
+  "reportTitle": "api",
+  "reportPageTitle": "Mochawesome Report Card",
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-11-10T03:15:18.808Z",
+    "end": "2022-11-10T03:15:18.826Z",
+    "duration": 18,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "danger",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "title": "",
+    "suites": [
+      {
+        "title": "test",
+        "suites": [],
+        "tests": [
+          {
+            "title": "test 1",
+            "fullTitle": "test test 1",
+            "timedOut": false,
+            "duration": 2,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "scr": "<img src=\"./screenshots/1668050118816_test_test_1.png\">",
+            "isRoot": false,
+            "uuid": "6999c640-30ad-40c9-84b8-4ddd1923307f",
+            "parentUUID": "ae81fa10-6ee8-46fe-bc4d-71c356e2608a",
+            "code": "<span class=\"hljs-keyword\">const</span> decode = (<span class=\"hljs-number\">0</span>, verifyToken_1.DecodeJsonWebToken2)(<span class=\"hljs-string\">'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTYzLCJlbXBsb3llZU51bWJlciI6IjIwMDU3MjEiLCJwb3NpdGlvbklkIjoiIiwiZGVwYXJ0bWVudElkIjoiMTY3MzgiLCJyb2xlIjoidXNlciIsImlhdCI6MTY2NzkwMjIyMiwiZXhwIjoxNjcwNDk0MjIyfQ.jDxJhcu-dGQXOSyhJiNn6e-VHPT9eokdsVSfCKqo4NA'</span>);<br><span class=\"hljs-built_in\">console</span>.log(decode);<br>chai_1.assert.equal(decode.employeeNumber, <span class=\"hljs-string\">'2005721111'</span>);",
+            "err": {
+              "name": "AssertionError",
+              "message": "expected '2005721' to equal '2005721111'",
+              "expected": "2005721111",
+              "actual": "2005721",
+              "stack": "AssertionError: expected <span class=\"hljs-string\">'2005721'</span> to equal <span class=\"hljs-string\">'2005721111'</span><br>    at Context.&lt;anonymous&gt; (src\\tests\\middleware.test\\DecodeJwt.test.ts:<span class=\"hljs-number\">11</span>:<span class=\"hljs-number\">12</span>)<br>    at processImmediate (node:internal/timers:<span class=\"hljs-number\">471</span>:<span class=\"hljs-number\">21</span>)",
+              "scr": "<img src=\"./screenshots/1668050118816_test_test_1.png\">"
+            },
+            "skipped": false
+          }
+        ],
+        "root": false,
+        "pending": [],
+        "_timeout": 20000,
+        "file": "\\src\\tests\\middleware.test\\DecodeJwt.test.ts",
+        "uuid": "ae81fa10-6ee8-46fe-bc4d-71c356e2608a",
+        "fullFile": "C:\\Users\\lieu.hong.thai\\Documents\\GitHub\\project-comic-master\\api\\src\\tests\\middleware.test\\DecodeJwt.test.ts",
+        "passes": [],
+        "failures": [
+          {
+            "title": "test 1",
+            "fullTitle": "test test 1",
+            "timedOut": false,
+            "duration": 2,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "scr": "<img src=\"./screenshots/1668050118816_test_test_1.png\">",
+            "isRoot": false,
+            "uuid": "6999c640-30ad-40c9-84b8-4ddd1923307f",
+            "parentUUID": "ae81fa10-6ee8-46fe-bc4d-71c356e2608a",
+            "code": "<span class=\"hljs-keyword\">const</span> decode = (<span class=\"hljs-number\">0</span>, verifyToken_1.DecodeJsonWebToken2)(<span class=\"hljs-string\">'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTYzLCJlbXBsb3llZU51bWJlciI6IjIwMDU3MjEiLCJwb3NpdGlvbklkIjoiIiwiZGVwYXJ0bWVudElkIjoiMTY3MzgiLCJyb2xlIjoidXNlciIsImlhdCI6MTY2NzkwMjIyMiwiZXhwIjoxNjcwNDk0MjIyfQ.jDxJhcu-dGQXOSyhJiNn6e-VHPT9eokdsVSfCKqo4NA'</span>);<br><span class=\"hljs-built_in\">console</span>.log(decode);<br>chai_1.assert.equal(decode.employeeNumber, <span class=\"hljs-string\">'2005721111'</span>);",
+            "err": {
+              "name": "AssertionError",
+              "message": "expected '2005721' to equal '2005721111'",
+              "expected": "2005721111",
+              "actual": "2005721",
+              "stack": "AssertionError: expected <span class=\"hljs-string\">'2005721'</span> to equal <span class=\"hljs-string\">'2005721111'</span><br>    at Context.&lt;anonymous&gt; (src\\tests\\middleware.test\\DecodeJwt.test.ts:<span class=\"hljs-number\">11</span>:<span class=\"hljs-number\">12</span>)<br>    at processImmediate (node:internal/timers:<span class=\"hljs-number\">471</span>:<span class=\"hljs-number\">21</span>)",
+              "scr": "<img src=\"./screenshots/1668050118816_test_test_1.png\">"
+            },
+            "skipped": false
+          }
+        ],
+        "skipped": [],
+        "hasTests": true,
+        "hasSuites": false,
+        "totalTests": 1,
+        "totalPasses": 0,
+        "totalFailures": 1,
+        "totalPending": 0,
+        "totalSkipped": 0,
+        "hasPasses": false,
+        "hasFailures": true,
+        "hasPending": false,
+        "hasSkipped": false,
+        "duration": 2
+      }
+    ],
+    "tests": [],
+    "root": true,
+    "pending": [],
+    "_timeout": 20000,
+    "uuid": "bd629b70-1fa2-47cf-8b2b-9242060fda36",
+    "fullFile": "",
+    "file": "",
+    "passes": [],
+    "failures": [],
+    "skipped": [],
+    "hasTests": false,
+    "hasSuites": true,
+    "totalTests": 0,
+    "totalPasses": 0,
+    "totalFailures": 0,
+    "totalPending": 0,
+    "totalSkipped": 0,
+    "hasPasses": false,
+    "hasFailures": false,
+    "hasPending": false,
+    "hasSkipped": false,
+    "duration": 0,
+    "rootEmpty": true
+  },
+  "allTests": [
+    {
+      "title": "test 1",
+      "fullTitle": "test test 1",
+      "timedOut": false,
+      "duration": 2,
+      "state": "failed",
+      "pass": false,
+      "fail": true,
+      "pending": false,
+      "scr": "<img src=\"./screenshots/1668050118816_test_test_1.png\">",
+      "isRoot": false,
+      "uuid": "07389182-4cb1-4705-87de-996f4aa0624c",
+      "parentUUID": "ae81fa10-6ee8-46fe-bc4d-71c356e2608a",
+      "code": "<span class=\"hljs-keyword\">const</span> decode = (<span class=\"hljs-number\">0</span>, verifyToken_1.DecodeJsonWebToken2)(<span class=\"hljs-string\">'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTYzLCJlbXBsb3llZU51bWJlciI6IjIwMDU3MjEiLCJwb3NpdGlvbklkIjoiIiwiZGVwYXJ0bWVudElkIjoiMTY3MzgiLCJyb2xlIjoidXNlciIsImlhdCI6MTY2NzkwMjIyMiwiZXhwIjoxNjcwNDk0MjIyfQ.jDxJhcu-dGQXOSyhJiNn6e-VHPT9eokdsVSfCKqo4NA'</span>);<br><span class=\"hljs-built_in\">console</span>.log(decode);<br>chai_1.assert.equal(decode.employeeNumber, <span class=\"hljs-string\">'2005721111'</span>);",
+      "err": {
+        "name": "AssertionError",
+        "message": "expected '2005721' to equal '2005721111'",
+        "expected": "2005721111",
+        "actual": "2005721",
+        "stack": "AssertionError: expected <span class=\"hljs-string\">'2005721'</span> to equal <span class=\"hljs-string\">'2005721111'</span><br>    at Context.&lt;anonymous&gt; (src\\tests\\middleware.test\\DecodeJwt.test.ts:<span class=\"hljs-number\">11</span>:<span class=\"hljs-number\">12</span>)<br>    at processImmediate (node:internal/timers:<span class=\"hljs-number\">471</span>:<span class=\"hljs-number\">21</span>)",
+        "scr": "<img src=\"./screenshots/1668050118816_test_test_1.png\">"
+      },
+      "skipped": false
+    }
+  ],
+  "allPending": [],
+  "allPasses": [],
+  "allFailures": [
+    {
+      "title": "test 1",
+      "fullTitle": "test test 1",
+      "timedOut": false,
+      "duration": 2,
+      "state": "failed",
+      "pass": false,
+      "fail": true,
+      "pending": false,
+      "scr": "<img src=\"./screenshots/1668050118816_test_test_1.png\">",
+      "isRoot": false,
+      "uuid": "aa54c4a6-a20f-4e80-b770-43847402c4c7",
+      "parentUUID": "ae81fa10-6ee8-46fe-bc4d-71c356e2608a",
+      "code": "<span class=\"hljs-keyword\">const</span> decode = (<span class=\"hljs-number\">0</span>, verifyToken_1.DecodeJsonWebToken2)(<span class=\"hljs-string\">'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTYzLCJlbXBsb3llZU51bWJlciI6IjIwMDU3MjEiLCJwb3NpdGlvbklkIjoiIiwiZGVwYXJ0bWVudElkIjoiMTY3MzgiLCJyb2xlIjoidXNlciIsImlhdCI6MTY2NzkwMjIyMiwiZXhwIjoxNjcwNDk0MjIyfQ.jDxJhcu-dGQXOSyhJiNn6e-VHPT9eokdsVSfCKqo4NA'</span>);<br><span class=\"hljs-built_in\">console</span>.log(decode);<br>chai_1.assert.equal(decode.employeeNumber, <span class=\"hljs-string\">'2005721111'</span>);",
+      "err": {
+        "name": "AssertionError",
+        "message": "expected '2005721' to equal '2005721111'",
+        "expected": "2005721111",
+        "actual": "2005721",
+        "stack": "AssertionError: expected <span class=\"hljs-string\">'2005721'</span> to equal <span class=\"hljs-string\">'2005721111'</span><br>    at Context.&lt;anonymous&gt; (src\\tests\\middleware.test\\DecodeJwt.test.ts:<span class=\"hljs-number\">11</span>:<span class=\"hljs-number\">12</span>)<br>    at processImmediate (node:internal/timers:<span class=\"hljs-number\">471</span>:<span class=\"hljs-number\">21</span>)",
+        "scr": "<img src=\"./screenshots/1668050118816_test_test_1.png\">"
+      },
+      "skipped": false
+    }
+  ],
+  "copyrightYear": 2022
+}
