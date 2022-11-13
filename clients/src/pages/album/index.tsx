@@ -1,8 +1,7 @@
+import React from 'react';
 import { Layout } from 'antd';
 import HTMLFlipBook from 'react-pageflip';
-import React from 'react';
 import { Page, PageCover } from './components/page.component';
-import LoginComponent from '../logins';
 
 const AlbumComponent = () => {
   return (
@@ -24,7 +23,7 @@ const AlbumComponent = () => {
         // onChangeOrientation={this.onChangeOrientation}
         // onChangeState={this.onChangeState}
         className="demo-book"
-        // ref={(el) => (this.flipBook = el)}
+      // ref={(el) => (this.flipBook = el)}
       >
         <PageCover>BOOK TITLE</PageCover>
         <Page number={1}>Lorem ipsum...</Page>

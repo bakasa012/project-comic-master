@@ -1,5 +1,4 @@
 import React from 'react';
-import HTMLFlipBook from 'react-pageflip';
 
 export const PageCover = React.forwardRef((props: any, ref: any) => {
   return (

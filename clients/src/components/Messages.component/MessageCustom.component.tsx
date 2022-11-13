@@ -32,7 +32,7 @@ const MessageCustomComponent = (props: Props) => {
       message.success({
         content,
         className,
-        style,
+        style: styleCss,
         duration,
         key,
       });
