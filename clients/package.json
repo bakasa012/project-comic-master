@@ -62,7 +62,7 @@
     "enquire-js": "^0.2.1",
     "jest-html-reporter": "^3.7.0",
     "jest-puppeteer": "^6.1.1",
-    "puppeteer": "^18.2.1",
+    "puppeteer-core": "^19.2.2",
     "rc-banner-anim": "^2.4.5",
     "rc-queue-anim": "^2.0.0",
     "rc-scroll-anim": "^2.7.6",
